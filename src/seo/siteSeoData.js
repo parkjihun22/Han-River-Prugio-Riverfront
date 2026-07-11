@@ -1,4 +1,4 @@
-const SITE_URL = "https://pyeongtaekgodeok-umirin.co.kr/";
+const SITE_URL = "https://www.hg-prugioriverfront.co.kr/";
 
 export const siteSeo = {
   siteName: "한강 푸르지오 리버프론트",

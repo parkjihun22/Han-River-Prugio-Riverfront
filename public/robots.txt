@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pyeongtaekgodeok-umirin.co.kr/sitemap.xml
+Sitemap: https://www.hg-prugioriverfront.co.kr/sitemap.xml
