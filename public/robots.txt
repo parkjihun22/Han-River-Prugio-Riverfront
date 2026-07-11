@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pyeongtaekgodeok-umirin.co.kr/sitemap.xml
