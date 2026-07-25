@@ -148,7 +148,7 @@ const page = ({
 export const seoPages = {
   home: page({
     path: "/",
-    title: "한강 푸르지오 리버프론트",
+    title: "▪한강 푸르지오 리버프론트",
     description: siteSeo.defaultDescription,
     menu: "홈",
     priority: 1,
