@@ -83,6 +83,20 @@ const InterestPopup = ({ onClose, registration, handleInputChange }) => {
                     required
                   />
                 </div>
+                <div className={styles.formGroup}>
+                <label>
+                  생년월일<span>*</span>
+                </label>
+                <input
+                  type="text"
+                  name="birth"
+                  value={registration.birth}
+                  onChange={handleInputChange}
+                  placeholder="예) 950101"
+                  maxLength={6}
+                  required
+                />
+              </div>
 
                 <button
                   type="submit"
