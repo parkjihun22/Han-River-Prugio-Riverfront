@@ -1,4 +1,4 @@
-const SITE_URL = "https://www.hg-prugioriverfront.co.kr/";
+const SITE_URL = "https://www.hg-prugioriverfront.co.kr";
 
 export const siteSeo = {
   siteName: "한강 푸르지오 리버프론트",
@@ -17,11 +17,18 @@ export const siteSeo = {
     addressRegion: "경기도",
     addressLocality: "김포시",
     streetAddress: "고촌읍 향산리 588-45번지 일원",
+    block: "김포 고촌 한강 생활권",
+    households: "공동주택 2,432세대",
+    scale: "공동주택 총 2,432세대 · 오피스텔 250실",
+    unitTypes: ["84㎡", "106㎡", "122㎡", "180㎡ PH", "오피스텔 84㎡", "오피스텔 90㎡"],
+    brand: "PRUGIO",
     brands: [
       "한강 푸르지오 리버프론트",
       "푸르지오",
       "대우건설",
     ],
+    developer: "대우건설",
+    contractor: "대우건설",
     navigationSchemaName: "한강 푸르지오 리버프론트 주요 메뉴",
   },
 
@@ -39,6 +46,9 @@ export const siteSeo = {
     "한강 푸르지오 리버프론트 커뮤니티",
     "한강 푸르지오 리버프론트 2432세대",
     "한강 푸르지오 리버프론트 오피스텔",
+    "한강 푸르지오 리버프론트 언론보도",
+    "한강 푸르지오 리버프론트 보도자료",
+    "한강 푸르지오 리버프론트 뉴스",
     "김포 한강 푸르지오",
     "김포 푸르지오 리버프론트",
     "모델하우스 방문예약",
@@ -101,8 +111,9 @@ export const seoNavigation = [
   },
   {
     name: "홍보센터",
-    path: "/Promotion/Customer",
+    path: "/Promotion/Press",
     children: [
+      { name: "언론보도", path: "/Promotion/Press" },
       { name: "관심고객등록", path: "/Promotion/Customer" },
     ],
   },
@@ -296,11 +307,22 @@ export const seoPages = {
     changefreq: "daily",
   }),
 
+  press: page({
+    path: "/Promotion/Press",
+    title: "언론보도 | 한강 푸르지오 리버프론트",
+    description:
+      "한강 푸르지오 리버프론트 언론보도 페이지입니다. 김포 고촌 한강 생활권, 공급 정보, 청약, 입지환경, 모델하우스 방문예약 관련 공식 보도자료와 분양 소식을 확인하세요.",
+    menu: "홍보센터",
+    image: "/img/og/main.jpg",
+    priority: 0.9,
+    changefreq: "daily",
+  }),
+
   notFound: page({
     path: "/404",
     title: "페이지를 찾을 수 없습니다 | 한강 푸르지오 리버프론트",
     description:
-      "요청하신 페이지를 찾을 수 없습니다. 한강 푸르지오 리버프론트 홈페이지의 사업안내, 입지환경, 단지안내, 평면도, E-모델하우스 및 관심고객등록 메뉴를 이용해 주세요.",
+      "요청하신 페이지를 찾을 수 없습니다. 한강 푸르지오 리버프론트 홈페이지의 사업안내, 입지환경, 단지안내, 평면도, E-모델하우스, 언론보도 및 관심고객등록 메뉴를 이용해 주세요.",
     menu: "오류",
     priority: 0,
     changefreq: "yearly",
@@ -308,26 +330,54 @@ export const seoPages = {
   }),
 };
 
+const normalizeSeoPath = (pathname = "/") => {
+  let cleanPath = pathname || "/";
+
+  try {
+    if (/^https?:\/\//.test(cleanPath)) {
+      cleanPath = new URL(cleanPath).pathname;
+    }
+  } catch {
+    cleanPath = "/";
+  }
+
+  cleanPath = decodeURI(cleanPath)
+    .split("?")[0]
+    .split("#")[0]
+    .replace(/\/$/, "");
+
+  return cleanPath.toLowerCase() || "/";
+};
+
 export const seoPathMap = Object.fromEntries(
   Object.entries(seoPages).map(([key, value]) => [
-    value.path.toLowerCase(),
+    normalizeSeoPath(value.path),
     key,
   ])
 );
 
+export const seoPageList = Object.values(seoPages).filter(
+  (item) => item.robots !== "noindex, follow"
+);
+
 export const getAbsoluteUrl = (path = "/") => {
   if (/^https?:\/\//.test(path)) return path;
-  return `${siteSeo.siteUrl}${path}`;
+
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+
+  return `${siteSeo.siteUrl}${normalizedPath}`;
 };
 
 export const getSeoPageByPath = (pathname = "/") => {
-  const decodedPath = decodeURI(pathname).replace(/\/$/, "") || "/";
-  const normalizedPath = decodedPath.toLowerCase();
+  const normalizedPath = normalizeSeoPath(pathname);
   const exactKey = seoPathMap[normalizedPath];
 
   if (exactKey) return seoPages[exactKey];
 
+  if (normalizedPath.endsWith("/press")) return seoPages.press;
+  if (normalizedPath.includes("/promotion/press")) return seoPages.press;
   if (normalizedPath.endsWith("/customer")) return seoPages.customer;
+  if (normalizedPath.includes("/promotion/customer")) return seoPages.customer;
 
   return seoPages.notFound;
 };
