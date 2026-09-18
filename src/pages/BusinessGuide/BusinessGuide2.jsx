@@ -15,7 +15,7 @@ const BusinessGuide2 = () => {
     const menuContents = [
       { title: "사업안내", url: "/BusinessGuide/intro" },
       { title: "분양일정", url: "/BusinessGuide/plan" },
-      // { title: "공급안내", url: "/BusinessGuide/documents" }
+    //   { title: "공급안내", url: "/BusinessGuide/documents" }
     ];
 
     const [isScroll, setIsScroll] = useState(false);
@@ -60,17 +60,12 @@ const BusinessGuide2 = () => {
   <div>청약, 당첨자 발표, 계약 등 필요한 일정을 확인하세요.</div>
 </div>
 
-{/* <img
+<img
   className={`${styles.image4} ${isImageVisible ? styles.visible : ''}`}
   src={page1}
   alt="한강 푸르지오 리버프론트 분양일정 및 청약 일정 안내"
-/> */}
+/>
 
-<div className={styles.readyContainer}>
-  {/* 필요한 경우 Ready 또는 분양 카운트 컴포넌트 삽입 */}
-
-  <Ready/>
-</div>
 
 
             <Footer />

@@ -13,7 +13,7 @@ const menuContents = [
   { title: "84㎡", url: "/FloorPlan/59A" },
   { title: "106㎡", url: "/FloorPlan/59B" },
   { title: "122㎡", url: "/FloorPlan/84A" },
-  { title: "180㎡", url: "/FloorPlan/84B" },
+  // { title: "180㎡", url: "/FloorPlan/84B" },
   // { title: "84A", url: "/FloorPlan/114A" },
   // { title: "84B", url: "/FloorPlan/114B" },
   { title: "E-모델하우스", url: "/FloorPlan/Emodel" },

@@ -72,7 +72,7 @@ const items = [
         <img
           src={mobileMap2}
           className={styles.mapImage}
-          alt="한강 푸르지오 리버프론트 지북동 생활권 지도"
+          alt="한강 푸르지오 리버프론트 생활권 지도"
         />
       </div>
     ),

@@ -71,13 +71,12 @@ const BusinessGuide2 = () => {
   <div>유의사항은 최종 분양 안내 기준으로 확인하시기 바랍니다.</div>
 </div>
 
-{/* <img
+<img
   className={`${styles.image4} ${isImageVisible ? styles.visible : ''}`}
   src={page1}
   alt="한강 푸르지오 리버프론트 공급안내 안내 이미지"
-/> */}
+/>
 
-<Ready/>
 
 			<Footer /> 
 		</div>

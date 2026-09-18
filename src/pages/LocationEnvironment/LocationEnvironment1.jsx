@@ -120,7 +120,7 @@ const LocationEnvironment1 = () => {
         <img
           src={page1}
           className={styles.image2}
-          alt="한강 푸르지오 리버프론트 입지환경과 지북동 생활권 안내 이미지"
+          alt="한강 푸르지오 리버프론트 입지환경과 생활권 안내 이미지"
         />
         <button
           type="button"
@@ -128,7 +128,7 @@ const LocationEnvironment1 = () => {
           onClick={() =>
             openZoom(
               page1,
-              "한강 푸르지오 리버프론트 입지환경과 지북동 생활권 안내 이미지"
+              "한강 푸르지오 리버프론트 입지환경과 생활권 안내 이미지"
             )
           }
           aria-label="입지환경 이미지 크게 보기"

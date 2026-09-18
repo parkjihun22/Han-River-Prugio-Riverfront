@@ -10,9 +10,6 @@ import FixIcon from "../../components/FixIcon/FixIcon";
 
 import page1 from "../../assets/SalesInfo/guide/page1.jpg";
 
-import Ready from "../../components/Ready/Ready"
-
-
 const ComplexGuide1 = () => {
   const menuContents = [
     { title: "공급안내", url: "/BusinessGuide/documents" },
@@ -23,13 +20,11 @@ const ComplexGuide1 = () => {
   ];
 
   const [isScroll, setIsScroll] = useState(false);
-
-  // 이미지 애니메이션용
-  const [isImage2Loaded, setIsImage2Loaded] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const { pathname } = useLocation();
 
-  // 페이지 이동 시 최상단으로
+  // 페이지 이동 시 최상단으로 이동
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -47,11 +42,6 @@ const ComplexGuide1 = () => {
     };
   }, []);
 
-  // 이미지 로드 완료
-  const handleImageLoad = () => {
-    setIsImage2Loaded(true);
-  };
-
   return (
     <div className={styles.container}>
       <Header isChanged={isScroll} />
@@ -63,20 +53,18 @@ const ComplexGuide1 = () => {
       <MenuBar contents={menuContents} />
 
       <div className={styles.textBox}>
-        <div>모델하우스 방문전 서류를 확인하세요</div>
+        <div>모델하우스 방문 전 서류를 확인하세요</div>
         <div>한강 푸르지오 리버프론트 서류안내</div>
       </div>
 
-      {/* <img
+      <img
         className={`${styles.image2} ${
-          isImage2Loaded ? styles.showImage2 : ""
+          isImageLoaded ? styles.showImage2 : ""
         }`}
         src={page1}
-        alt="한강 푸르지오 리버프론트 서류안내 이미지"
-        onLoad={handleImageLoad}
-      /> */}
-
-      <Ready/>
+        alt="한강 푸르지오 리버프론트 서류안내"
+        onLoad={() => setIsImageLoaded(true)}
+      />
 
       <div className={styles.commonBox2}>
         <div className={styles.notice}>

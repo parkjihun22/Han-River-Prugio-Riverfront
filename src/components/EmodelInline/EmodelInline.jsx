@@ -3,28 +3,22 @@ import styles from "./EmodelInline.module.scss";
 
 const emodelTabs = [
   {
-    id: "84B",
-    title: "84B㎡",
+    id: "84A",
+    title: "84A㎡",
     description: "대표 선호 평면의 공간감과 주요 실내 포인트를 확인할 수 있습니다.",
-    // url: "https://pg1.lynn.co.kr/upload/Godeok_VR/?type=type4",
+    url: "https://prugio-riverfront.com/pages/vr/tour.html?starttype=1&startscene=scene_84a_living",
   },
   {
-    id: "84D",
-    title: "84D㎡",
+    id: "84C",
+    title: "84C㎡",
     description: "공간 활용도를 높인 타입의 실내 흐름을 VR로 둘러볼 수 있습니다.",
-    // url: "https://xn--289apcxu78q5pay10eghb4a107h3gx0d900a0h0a.com/vr/84c.html",
+    url: "https://prugio-riverfront.com/pages/vr/tour.html?starttype=2&startscene=scene_84c_living",
   },
   {
-    id: "94A",
-    title: "94A",
+    id: "122",
+    title: "122㎡",
     description: "여유로운 중대형 평면의 생활 동선과 실내 구성을 확인할 수 있습니다.",
-    // url: "https://xn--289apcxu78q5pay10eghb4a107h3gx0d900a0h0a.com/vr/101.html",
-  },
-  {
-  id: "101A",
-  title: "101A",
-  description: "여유로운 중대형 평면의 생활 동선과 실내 구성을 확인할 수 있습니다.",
-  // url: "https://xn--289apcxu78q5pay10eghb4a107h3gx0d900a0h0a.com/vr/101.html",
+    url: "https://prugio-riverfront.com/pages/vr/tour.html?starttype=2&startscene=scene_122_living",
   },
 
 ];

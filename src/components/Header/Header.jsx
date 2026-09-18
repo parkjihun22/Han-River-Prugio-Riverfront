@@ -29,7 +29,7 @@ const menuArray = [
     title: "브랜드소개",
     subMenu: [
       { subTitle: "브랜드소개", subUrl: "/Brand/intro" },
-      { subTitle: "홍보영상", subUrl: "/Brand/video" },
+      // { subTitle: "홍보영상", subUrl: "/Brand/video" },
     ],
   },
   {
@@ -68,7 +68,7 @@ const menuArray = [
       { subTitle: "84㎡ ", subUrl: "/FloorPlan/59A" },
       { subTitle: "106㎡", subUrl: "/FloorPlan/59B" },
       { subTitle: "122㎡", subUrl: "/FloorPlan/84A" },
-      { subTitle: "180㎡", subUrl: "/FloorPlan/84B" },
+      // { subTitle: "180㎡", subUrl: "/FloorPlan/84B" },
       // { subTitle: "84㎡A", subUrl: "/FloorPlan/114A" },
       // { subTitle: "84㎡B", subUrl: "/FloorPlan/114B" },
       { subTitle: "E-모델하우스", subUrl: "/FloorPlan/Emodel" },

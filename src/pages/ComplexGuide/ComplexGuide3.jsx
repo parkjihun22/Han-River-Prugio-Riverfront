@@ -59,14 +59,12 @@ const ComplexGuide3 = () => {
 </div>
 
 
-{/* <img
+<img
   className={`${styles.image2} ${isImage2Loaded ? styles.showImage2 : ''}`}
   src={page1}
   alt="한강 푸르지오 리버프론트 커뮤니티 및 입주민 편의시설 안내 이미지"
   onLoad={handleImageLoad}
-/> */}
-
-<Ready/>
+/>
 
       <div className={styles.commonBox}>
               <div className={styles.notice}>

@@ -12,7 +12,8 @@ import FixIcon from "../../components/FixIcon/FixIcon";
 const Brand2 = () => {
 	const menuContents = [
 		{ title: "브랜드 소개", url: "/Brand/intro" },
-		{ title: "홍보 영상", url: "/Brand/video" }];
+		// { title: "홍보 영상", url: "/Brand/video" }
+	];
 
 
 	const [isScroll, setIsScroll] = useState(false);

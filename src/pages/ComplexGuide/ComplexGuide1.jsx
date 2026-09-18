@@ -58,14 +58,13 @@ const ComplexGuide1 = () => {
   <div>한강 푸르지오 리버프론트, 총 2,432세대 랜드마크 브랜드 단지</div>
 </div>
 
-{/* <img
+<img
   className={`${styles.image2} ${isImage2Loaded ? styles.showImage2 : ''}`}
   src={page1}
   alt="한강 푸르지오 리버프론트 단지배치도 및 단지안내 이미지"
   onLoad={handleImageLoad}
-/> */}
+/>
 
-<Ready/>
 			<div className={styles.commonBox}>
 				<div className={styles.notice}>
 					※ 상기 단지배치도 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 날 수 있습니다

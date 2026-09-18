@@ -59,14 +59,13 @@ const ComplexGuide1 = () => {
   <div>한강 푸르지오 리버프론트 동·호수 배치를 확인하세요.</div>
 </div>
 
-{/* <img
+<img
   className={`${styles.image2} ${isImage2Loaded ? styles.showImage2 : ''}`}
   src={page1}
   alt="한강 푸르지오 리버프론트 동호수 배치도 및 세대 위치 안내"
   onLoad={handleImageLoad}
-/> */}
+/>
 
-<Ready/>
 
   
 
